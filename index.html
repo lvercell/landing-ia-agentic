@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluciones IA Agentic - Lucas Vercellini</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; color: #333; }
+    .header { background: #003366; color: white; padding: 2rem; text-align: center; }
+    .lang-selector { text-align: center; margin: 1rem 0; }
+    .lang-selector button { margin: 0 5px; padding: 5px 10px; cursor: pointer; }
+    .section { padding: 2rem; max-width: 900px; margin: auto; display: none; }
+    .plans { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-around; }
+    .plan { background: white; border: 1px solid #ccc; border-radius: 8px; padding: 1.5rem; width: 280px; }
+    .footer { background: #003366; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+    form { background: #fff; padding: 1rem; border-radius: 8px; margin-top: 2rem; }
+    input, textarea { width: 100%; padding: 8px; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; }
+    button[type=submit] { background: #006699; color: white; border: none; padding: 10px 15px; cursor: pointer; }
+    .note { font-size: 0.9rem; color: #666; margin-top: 1rem; }
+    .thank-you { display: none; background: #dff0d8; color: #3c763d; padding: 1rem; border-radius: 5px; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>IA Agentic para Empresas</h1>
+  <p>Automatización inteligente para negocios de todos los tamaños</p>
+</div>
+
+<div class="lang-selector">
+  <button onclick="setLang('es')">ES</button>
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('it')">IT</button>
+</div>
+
+<!-- Español -->
+<div class="section lang-content" id="lang-es">
+  <h2>¿Qué ofrecemos?</h2>
+  <p>Automatizá análisis, redacción, asesoría y tareas repetitivas con agentes de IA personalizados que trabajan para vos 24/7.</p>
+  <h2>Planes disponibles</h2>
+  <div class="plans">
+    <div class="plan"><h3>Plan Básico – €99/mes</h3><ul><li>Hasta 3 agentes personalizados</li><li>Hosting compartido incluido</li><li>Soporte por email</li><li>1 cambio menor cada 6 meses</li></ul></div>
+    <div class="plan"><h3>Plan Pro – €179/mes</h3><ul><li>Hasta 5 agentes inteligentes</li><li>Hosting optimizado incluido</li><li>Soporte por WhatsApp y email</li><li>1 cambio menor por trimestre</li></ul></div>
+    <div class="plan"><h3>Plan Premium – €299/mes</h3><ul><li>Hasta 8 agentes IA avanzados</li><li>Hosting dedicado</li><li>Soporte prioritario</li><li>1 cambio mensual incluido</li><li>Dominio personalizado</li></ul></div>
+  </div>
+  <p class="note">* El hosting premium puede tener un costo adicional dependiendo de los recursos requeridos.</p>
+  <h2>Contacto</h2>
+  <form class="contact-form">
+    <input type="text" name="name" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu email" required>
+    <textarea name="message" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+  <div class="thank-you">¡Gracias! Tu mensaje ha sido enviado correctamente.</div>
+</div>
+
+<!-- English -->
+<div class="section lang-content" id="lang-en">
+  <h2>What do we offer?</h2>
+  <p>Automate analysis, writing, advisory and repetitive tasks with personalized AI agents that work for you 24/7.</p>
+  <h2>Available Plans</h2>
+  <div class="plans">
+    <div class="plan"><h3>Basic Plan – €99/month</h3><ul><li>Up to 3 personalized agents</li><li>Shared hosting included</li><li>Email support</li><li>1 minor update every 6 months</li></ul></div>
+    <div class="plan"><h3>Pro Plan – €179/month</h3><ul><li>Up to 5 intelligent agents</li><li>Optimized hosting included</li><li>Support via WhatsApp and email</li><li>1 minor update per quarter</li></ul></div>
+    <div class="plan"><h3>Premium Plan – €299/month</h3><ul><li>Up to 8 advanced AI agents</li><li>Dedicated hosting</li><li>Priority support</li><li>1 update per month included</li><li>Custom domain</li></ul></div>
+  </div>
+  <p class="note">* Premium hosting may incur additional costs depending on the resources required.</p>
+  <h2>Contact</h2>
+  <form class="contact-form">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" placeholder="Your message" required></textarea>
+    <button type="submit">Send message</button>
+  </form>
+  <div class="thank-you">Thank you! Your message has been sent successfully.</div>
+</div>
+
+<!-- Italiano -->
+<div class="section lang-content" id="lang-it">
+  <h2>Cosa offriamo?</h2>
+  <p>Automatizza analisi, scrittura, consulenza e attività ripetitive con agenti IA personalizzati che lavorano per te 24/7.</p>
+  <h2>Piani disponibili</h2>
+  <div class="plans">
+    <div class="plan"><h3>Piano Base – €99/mese</h3><ul><li>Fino a 3 agenti personalizzati</li><li>Hosting condiviso incluso</li><li>Supporto via email</li><li>1 modifica minore ogni 6 mesi</li></ul></div>
+    <div class="plan"><h3>Piano Pro – €179/mese</h3><ul><li>Fino a 5 agenti intelligenti</li><li>Hosting ottimizzato incluso</li><li>Supporto via WhatsApp e email</li><li>1 modifica minore per trimestre</li></ul></div>
+    <div class="plan"><h3>Piano Premium – €299/mese</h3><ul><li>Fino a 8 agenti IA avanzati</li><li>Hosting dedicato</li><li>Supporto prioritario</li><li>1 modifica mensile inclusa</li><li>Dominio personalizzato</li></ul></div>
+  </div>
+  <p class="note">* L'hosting premium può comportare costi aggiuntivi in base alle risorse richieste.</p>
+  <h2>Contatto</h2>
+  <form class="contact-form">
+    <input type="text" name="name" placeholder="Il tuo nome" required>
+    <input type="email" name="email" placeholder="La tua email" required>
+    <textarea name="message" placeholder="Il tuo messaggio" required></textarea>
+    <button type="submit">Invia messaggio</button>
+  </form>
+  <div class="thank-you">Grazie! Il tuo messaggio è stato inviato correttamente.</div>
+</div>
+
+<div class="footer">
+  <p>© 2025 Lucas Vercellini - Soluzioni IA per aziende</p>
+</div>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.lang-content').forEach(sec => sec.style.display = 'none');
+  const target = document.getElementById('lang-' + lang);
+  if (target) target.style.display = 'block';
+}
+setLang('es');
+
+// Manejo de envío de formularios sin salir de la página
+document.querySelectorAll('.contact-form').forEach(form => {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const thankYou = form.nextElementSibling;
+    fetch("https://formsubmit.co/ajax/lvercell@gmail.com", {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+      } else {
+        alert("Error al enviar el mensaje.");
+      }
+    })
+    .catch(error => alert("Error de red: " + error));
+  });
+});
+</script>
+
+</body>
+</html>
