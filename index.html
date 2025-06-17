@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluciones IA Agentic - Lucas Vercellini</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; color: #333; }
+    .header { background: #003366; color: white; padding: 2rem; text-align: center; }
+    .lang-selector { text-align: center; margin: 1rem 0; }
+    .lang-selector button { margin: 0 5px; padding: 5px 10px; cursor: pointer; }
+    .section { padding: 2rem; max-width: 900px; margin: auto; }
+    .plans { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-around; }
+    .plan { background: white; border: 1px solid #ccc; border-radius: 8px; padding: 1.5rem; width: 280px; }
+    .footer { background: #003366; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+    form { background: #fff; padding: 1rem; border-radius: 8px; margin-top: 2rem; }
+    input, textarea { width: 100%; padding: 8px; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; }
+    button[type=submit] { background: #006699; color: white; border: none; padding: 10px 15px; cursor: pointer; }
+    .note { font-size: 0.9rem; color: #666; margin-top: 1rem; }
+    .thank-you { display: none; background: #dff0d8; color: #3c763d; padding: 1rem; border-radius: 5px; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Soluciones IA Agentic para Empresas</h1>
+  <p>Automatización inteligente para negocios de todos los tamaños</p>
+</div>
+
+<div class="lang-selector">
+  <button onclick="setLang('es')">ES</button>
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('it')">IT</button>
+</div>
+
+<div class="section lang-content" id="lang-es">
+  <h2>¿Qué ofrecemos?</h2>
+  <p>Automatizá análisis, redacción, asesoría y tareas repetitivas con agentes de IA personalizados que trabajan para vos 24/7.</p>
+  <h2>Planes disponibles</h2>
+  <div class="plans">
+    <div class="plan"><h3>Plan Básico – €99/mes</h3><ul><li>Hasta 3 agentes personalizados</li><li>Hosting compartido incluido</li><li>Soporte por email</li><li>1 cambio menor cada 6 meses</li></ul></div>
+    <div class="plan"><h3>Plan Pro – €179/mes</h3><ul><li>Hasta 5 agentes inteligentes</li><li>Hosting optimizado incluido</li><li>Soporte por WhatsApp y email</li><li>1 cambio menor por trimestre</li></ul></div>
+    <div class="plan"><h3>Plan Premium – €299/mes</h3><ul><li>Hasta 8 agentes IA avanzados</li><li>Hosting dedicado</li><li>Soporte prioritario</li><li>1 cambio mensual incluido</li><li>Dominio personalizado</li></ul></div>
+  </div>
+  <p class="note">* El hosting premium puede tener un costo adicional dependiendo de los recursos requeridos.</p>
+  <h2>Contacto</h2>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu email" required>
+    <textarea name="message" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+  <div class="thank-you" id="thank-you">¡Gracias! Tu mensaje ha sido enviado correctamente.</div>
+</div>
+
+<div class="footer">
+  <p>© 2025 Lucas Vercellini - Soluciones IA para empresas</p>
+</div>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.lang-content').forEach(sec => sec.style.display = 'none');
+  const target = document.getElementById('lang-' + lang);
+  if (target) target.style.display = 'block';
+}
+setLang('es');
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const form = e.target;
+  fetch("https://formsubmit.co/ajax/lvercell@gmail.com", {
+    method: "POST",
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      form.style.display = 'none';
+      document.getElementById('thank-you').style.display = 'block';
+    } else {
+      alert("Hubo un error al enviar el mensaje.");
+    }
+  })
+  .catch(error => alert("Error de red: " + error));
+});
+</script>
+
+</body>
+</html>
